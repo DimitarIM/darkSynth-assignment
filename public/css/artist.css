@@ -1,0 +1,18 @@
+.showcase__artist {
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 138px;
+    min-height: 100vh;
+}
+
+.artist_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}

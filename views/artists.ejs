@@ -1,0 +1,37 @@
+<div class="showcase__artists">
+    <div class="arist-card"><img alt=""></div>
+    <div class="artist-box" style="display: grid;">
+        <div class="play-button"><img src="/img/icons/play-button_synth.png" alt=""></div>
+
+        <div class="space-filler"></div>
+        <div class="triangle-filler-right"></div>
+        <div class="triangle-filler-left"></div>
+
+        <div class="box-side_right"></div>
+        <div class="box-side_left"></div>
+        <div class="box-side_back"></div>
+        <h4>Date</h4>
+        <h4 class="prop_center">Name</h4>
+        <h4>Music Type</h4>
+    </div>
+    <div class="artist-list">
+        <% data.forEach(artist=> { %>
+            <a href="/artist/<%= artist._id %>">
+                <div <% /* eslint-disable css-propertyvalueexpected */ %> class="artist-box inactive" style="z-index: <%= data.length - data.indexOf(artist)%>" >
+                    <div class="space-filler"></div>
+                    <div class="triangle-filler-right"></div>
+                    <div class="triangle-filler-left"></div>
+            
+                    <div class="box-side_right"></div>
+                    <div class="box-side_left"></div>
+                    <div class="box-side_back"></div>
+                    <h4>Date</h4>
+                    <h4 class="prop_center">
+                        <%= artist.name %>
+                    <h4>Music Type</h4>
+                    <img src="/img/icons/arrow-right_synth.svg" class="arrow-right" alt="">
+                </div>
+            </a>
+            <% }) %>
+    </div>
+</div>

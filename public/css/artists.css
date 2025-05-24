@@ -1,0 +1,166 @@
+.showcase__artists {
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25rem 1rem 3rem 1rem;
+    background-color: var(--dark);
+}
+
+.artist-box{
+    display: grid;
+    grid-template-columns: 12rem 12rem 12rem 1fr;
+    position: relative;
+    align-items: center;
+    width: 50rem;
+    height: 2rem;
+    border: solid 2px var(--gray-light);
+    padding: 1rem;
+    z-index: 20;
+    background-color: rgb(26, 8, 8);
+    transition: 0.5s;
+    margin-bottom: -1px;
+    display: none;
+}
+
+.artist-box.active{
+    transition: 0.3s;
+    display: grid;
+    animation: fade-in 0.5s ease;
+}
+
+.artist-box h4 {
+    color: var(--gray-light);
+    margin: 0;
+    transition: 0.3s;
+}
+
+.artist-box.active:hover {
+    transform: translateX(10px);
+    background-color: rgb(191, 191, 191);;
+    box-shadow: 0 0px 20px rgba(191, 191, 191, 0.7);
+}
+
+.artist-box.active:hover h4 {
+    color: var(--dark);
+}
+
+.arrow-right{
+    width: 25px;
+    height: 25px;
+    justify-self: end;
+    padding-right: 0.5rem;
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(232deg) brightness(105%) contrast(102%);
+}
+
+.play-button {
+    position: absolute;
+    width: 55px;
+    height: 38px;
+    left: 46.5%;
+    bottom: 8rem;
+    cursor: pointer;
+}
+
+.play-button img {
+    width: 100%;
+    height: 100%;
+}
+.artist-box.expand {
+    transform: translateY(-40px);
+}
+.artist-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.artist-list a {
+    text-decoration: none;
+}
+
+.artist-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.box-side_right {
+    position: absolute;
+    height: 2px;
+    background-color: var(--gray-light);
+    width: 12rem;
+    left: -48.6px;
+    bottom: 147px;
+    transform: rotate(-60deg);
+}
+
+.box-side_left {
+    position: absolute;
+    height: 2px;
+    background-color: var(--gray-light);
+    width: 12rem;
+    right: -48.6px;
+    bottom: 147px;
+    transform: rotate(60deg);
+}
+
+.box-side_back {
+    position: absolute;
+    height: 2px;
+    background-color: #838181;
+    left: 96px;
+    right: 96px;
+    bottom: 230px;
+}
+
+.space-filler {
+    position: absolute;
+    width: 640px;
+    left: 96px;
+    height: 167px;
+    bottom: 4rem;
+    z-index: -1;
+}
+
+.triangle-filler-right {
+    position: absolute;
+    width: 170px;
+    bottom: 4rem;
+    left:734px;
+    aspect-ratio: 1;
+    clip-path: polygon(0 0,58% 100%,0 100%);
+    z-index: -1;
+}
+
+.triangle-filler-left {
+    position: absolute;
+    width: 170px;
+    bottom: 4rem;
+    left:0;
+    aspect-ratio: 1;
+    clip-path: polygon(58% 0,58% 100%,0 100%);
+    z-index: -1;
+}
+
+@keyframes fade-in {
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

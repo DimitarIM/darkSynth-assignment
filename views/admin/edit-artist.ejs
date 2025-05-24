@@ -1,0 +1,20 @@
+<div class="showcase__admin">
+    <a class="btn" href="/dashboard">&larr; Back</a>
+    <h2>View / Edit Artist</h2>
+
+    <form action="/delete-artist/<%= data._id %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete" class="btn-delete btn">
+    </form>
+
+    <form action="/edit-artist/<%= data._id %>?_method=PUT" method="POST">
+
+        <label for="name"><b>Title</b></label>
+        <input type="text" placeholder="Artist Title" name="name" value="<%= data.name %>">
+      
+        <label for="description"><b>Content</b></label>
+        <textarea name="description" cols="50" rows="10"><%= data.description %></textarea>
+      
+        <input type="submit" value="Update" class="btn">
+      
+      </form>
+</div>

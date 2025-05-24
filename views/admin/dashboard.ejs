@@ -1,0 +1,26 @@
+<div class="showcase__admin">
+    <div class="panel__artist">
+        <div class="admin-title">
+            <h2>Artists</h2>
+            <a href="/add-artist" class="btn">+ Add New</a>
+        </div>
+        
+        <ul class="admin-artists">
+            <% data.forEach(artist => { %>
+             <li>
+                <a class="btn" href="/artist/<%= artist.id %>">
+                    <%= artist.name %> &nearr;
+                </a>
+                <div class="admin-artist-controls">
+                    <a href="/edit-artist/<%= artist._id %>" class="btn">Edit</a>
+        
+                    <form action="/delete-artist/<%= artist._id %>?_method=DELETE" method="POST">
+                        <input type="submit" value="Delete" class="btn">
+                    </form>
+                </div>
+             </li>
+            <% }) %>
+        </ul>
+    </div>
+    
+</div>

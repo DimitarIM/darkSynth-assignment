@@ -1,0 +1,29 @@
+<header class="header">
+    <a href="/" class="header__logo">
+      <div class="logo__circle">
+        <img src="/img/cross_metal.png" alt="">
+      </div>
+    </a>
+  
+    <nav class="header__nav">
+      <ul>
+        <li>
+          <a href="/" class="<%= isActiveRoute('/', currentRoute) %>">Home</a>
+        </li>
+        <li>
+          <a href="/artists" class="<%= isActiveRoute('/artists', currentRoute) %>">Artists</a>
+        </li>
+        <li>
+          <a href="/contact" class="<%= isActiveRoute('/contact', currentRoute) %>">Contact</a>
+        </li>
+      </ul>
+  
+    </nav>
+  
+    <div class="header__button">
+      <a href="/admin" class="admin" ">
+        Admin View
+      </a>
+    </div>
+  
+  </header>

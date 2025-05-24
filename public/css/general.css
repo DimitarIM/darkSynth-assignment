@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+@font-face {
+  font-family: Outrun;
+  src: url("../fonts/Streamster.ttf") format("truetype");
+}
+
+
+:root {
+  --dark: #000000;
+  --black: rgb(18, 18, 18);
+  --black-red: rgb(33, 11, 11);
+  --gray: #7E7E7E;
+  --gray-light: #E4E4E4;
+  --red: rgb(43, 26, 26);
+  --font-size-base: 1rem;
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --border-radius: 10px;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Tektur", sans-serif;
+  color: var(--gray-light);
+  font-size: var(--font-size-base);
+  background-color: var(--black-red);
+  margin: 0;
+}
+
+a { color: var(--black-red); }
+h1 { font-size: var(--font-size-xl); }
+h2 { font-size: var(--font-size-lg); }
+h3 { font-size: var(--font-size-md); }
+
+.padding_1 {
+  padding: 1rem;
+}
+.padding_2 {
+  padding: 2rem;
+}
+.padding_3 {
+  padding: 3rem;
+}
+
+.start {
+  justify-content: start;
+}
+.center {
+  justify-content: center;
+}
+.end {
+  justify-content: end;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+select,
+textarea {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.7rem 0.75rem;
+  margin-bottom: 1rem;
+}
+.container_row {
+  display: flex;
+  width: auto;
+  max-width: 200rem;
+  height: 100%;
+}
+
+.container_col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 200rem;
+  height: auto;
+}
+
+.container_col.start, .container_row.start {
+ justify-content: start;
+}
+.container_col.center, .container_row.center {
+  justify-content: center;
+}
+.container_col.end, .container_row.end {
+  justify-content: end;
+}
+.btn {
+  background-color: var(--black-red);
+  border: none;
+  color: var(--black-red); 
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px; 
+  cursor: pointer;
+}
+
+.btn-delete {
+  padding: 10px 16px;
+  background-color: var(--red);
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+}

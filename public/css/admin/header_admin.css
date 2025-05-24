@@ -1,0 +1,20 @@
+.header__admin {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "logo button"
+      "menu menu";
+    padding: 10px;
+    background: var(--black-red);
+    font-family: Outrun;
+    letter-spacing: 3px;
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: invert(100%);
+  }

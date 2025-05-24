@@ -1,0 +1,117 @@
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "logo button"
+    "menu menu";
+  padding: 10px;
+  font-family: Outrun;
+  letter-spacing: 3px;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: invert(100%);
+}
+  
+  @media only screen and (min-width: 768px) {
+    .header {
+      grid-template-columns: auto 1fr auto;
+      grid-template-areas: 
+      "logo menu button";
+    }
+  }
+  .header__logo {
+    grid-area: logo;
+  }
+
+  .logo__circle {
+    transition: 1s;
+  }
+
+  .logo__circle:hover {
+    transform: rotate(180deg)
+  }
+
+  .header__logo .logo__circle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black-red);
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    z-index: 30;
+  }
+  
+  .header__logo .logo__circle img {
+    width: 90%;
+    height: 90%;
+  }
+  .header__nav {
+    justify-content: center;
+    display: flex;
+    grid-area: menu;
+  }
+
+  .header__nav a {
+    transition: 0.3s;
+    mix-blend-mode: difference;
+  }
+
+  .header__nav a:hover{
+    color: rgb(174, 10, 10);
+  }
+  
+  .header__logo, .header__nav, .header__button {
+    width: 100%;
+  }
+  
+  .header__button {
+    display: flex;
+    justify-content: end;
+    grid-area: button;
+  }
+  
+  .header__button button {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    border: 0;
+    padding: 6px 12px;
+    background: none;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--black-red);
+    cursor: pointer;
+  }
+  
+  .header__button button:hover {
+    border: 2px solid var(--gray-light);
+  }
+  
+  /* Header -> Navigation */
+  .header__nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    font-weight: 600;
+    padding: 0;
+  }
+  
+  .header__nav ul a {
+    padding: 20px;
+    text-decoration: none;
+  }
+  
+  .header__nav ul a.active {
+    color: rgb(174, 10, 10);
+  }
