@@ -2,9 +2,11 @@
     z-index: 0;
     display: flex;
     position: relative;
-    padding-top: 138px;
+    padding: calc(1rem + 138px) 1rem 1rem 1rem;
     min-height: 100vh;
-    background:no-repeat top url(../img/miasma_synth.jpg);
+    background:no-repeat bottom url(../img/miasma_synth.jpg);
+    justify-content: center;
+    align-items: center;
 }
 .showcase__contact h1 {
     text-align: center;
@@ -55,4 +57,27 @@
 .box h2 {
     margin: 0;
     align-self: center;
+}
+
+.links a {
+    color: var(--gray-light);
+}
+
+@media screen and (max-width:945px) {
+    .showcase__contact {
+        flex-direction: column;
+    }
+
+    .showcase__contact img {
+        align-self: center;
+    }
+    .container_col {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .showcase__contact {
+        padding: calc(1rem + 218px) 1rem 1rem 1rem;
+    }
 }

@@ -144,23 +144,54 @@
     clip-path: polygon(58% 0,58% 100%,0 100%);
     z-index: -1;
 }
-
 @keyframes fade-in {
-    0%{
+    0% {
         transform: translateY(-50px);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translateX(0px);
         opacity: 1;
     }
 }
 
 @keyframes fade-out {
-    0%{
+    0% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 0;
+    }
+}
+@media screen and (max-width:990px) {
+    .triangle-filler-left, .triangle-filler-right, .space-filler {
+        display: none;
+    }
+
+    .play-button {
+        left: 44.5%;
+    }
+
+    .arrow-right {
+        display: none;
+    }
+
+    .artist-box {
+        grid-template-columns: 7rem 7rem 1fr;
+        width: 30rem;
+    }
+
+}
+
+@media screen and (max-width:541px) {
+    .play-button {
+        left: 40%;
+    }
+
+    .artist-box {
+        width: 16rem;
+        font-size: 12px;
     }
 }

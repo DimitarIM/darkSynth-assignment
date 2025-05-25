@@ -14,11 +14,13 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    max-width: 100%;
+    width: 100%;
+    max-width: 50rem
 }
 
 .admin-title {
-    min-width: 50rem;
+    width: 100%;
+    max-width: 50rem;
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -35,4 +37,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width:343px) {
+    .btn {
+        font-size: 12px;
+    }
 }

@@ -112,7 +112,7 @@ a.displaySlide .overlay{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     padding: 1rem;
     gap: 5rem;
 }
@@ -159,4 +159,42 @@ a.displaySlide .overlay{
     padding-bottom: 5rem;
     font-size: 2rem;
     text-decoration: none;
+}
+
+@media screen and (max-width:768px) {
+    .showcase {
+        padding-top: 218px;
+    }
+}
+
+@media screen and (max-width:748px) {
+    .showcase__lower .container_row {
+        gap: 2rem;
+    }
+
+    .artists,
+    .contact {
+        height: 12rem;
+        width: 12rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .slider a {
+        width: 20rem;
+        height: 20rem;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .latest__post {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .showcase__lower .container_row {
+        gap: 2rem;
+        flex-direction: column;
+    }
 }
